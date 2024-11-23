@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  gap: 1em;
+  width: 500px;
+  height: 500px;
+  border: 5px solid;
+  border-radius: 50px;
+  margin-top:100px;
+  padding:50px;
+}
+
+.ProductCardContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  width: 300px;
+  height: 500px;
+}
+
+.ProductCardImageContainer {
+  display: flex;
+}
+
+.ProductCardPropertiesContainer {
+  display: flex;
+  flex-grow: 0.8;
+  flex-direction:column;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+
+.ProductCardButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.ProductCardButton {
+  width: 200px;
+  height: 40px;
+  background-color: #48ba1f;
+  border: 2px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ProductCardButton:hover {
+  background-color: #50dd1d;
+}
+
+.ProductImage {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.ProductDescirption {
+  display: flex;
+  word-wrap: break-word;
+}
