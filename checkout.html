@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Simulation</title>
+    <link rel="stylesheet" href="./style/checkout-style.css">
+  </head>
+  <body>
+    <div class="Container">
+      <div class="ProductContainer">
+        <div class="ProductCardImageContainer">
+            <img src="/images/boots.jpg" class="ProductImage">
+          <div class="ProductCardPropertiesContainer">
+            <span>
+              Name: ${product.name}
+            </span>
+            <span class="ProductDescirption">
+              Description: ${product.description}.
+            </span>
+            <span>
+              Rating: ${product.rating}
+            </span>
+            <span>
+              Price: ${product.price}
+            </span>
+          </div>
+          <span class="ProductCardButtonRemoveContainer">
+            <button class="ProductCardButton" data-product-id = "${product.id}">Remove</button>
+          </span>
+        </div>
+      </div>
+      
+    </div>
+
+  </body>
+</html>

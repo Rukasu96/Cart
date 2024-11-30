@@ -1,0 +1,47 @@
+body {
+  display:flex;
+  flex-direction:center;
+  justify-content:center;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  width: 100%;
+  height: 100%;
+}
+
+.ProductContainer {
+  display: flex;
+  justify-content: center;
+  border: 2px solid;
+  width: 600px;
+  height:150px;
+  margin: 1px;
+}
+
+.ProductCardImageContainer {
+  display: flex;
+}
+
+.ProductImage {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.ProductCardPropertiesContainer {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  justify-content:space-evenly;
+  margin: 5px;
+}
+
+.ProductCardButtonRemoveContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px; 
+  flex-grow: 0.6;
+}

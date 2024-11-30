@@ -63,3 +63,4 @@ function updateCartQuantity(){
   document.querySelector('.jsCartQuantityButton').innerHTML = cartQuantityHTML;
 }
 
+export default cart;
