@@ -1,6 +1,5 @@
 export default class Cart {
   cartItems;
-  cartQuantity = 0;
   #localStorageKey = "cart";
 
   constructor(){
@@ -11,10 +10,7 @@ export default class Cart {
     this.cartItems = JSON.parse(localStorage.getItem(this.#localStorageKey));
   
     if(!this.cartItems) {
-      this.cartItems = [{
-        productId: 12,
-        quantity: 1,
-      }];
+      this.cartItems = [];
     }
   }
 
@@ -24,6 +20,14 @@ export default class Cart {
 
   addToCart(productId) {
     let matchingItem;
+
+    if(this.cartItems === null){
+      this.cartItems = [{
+        productId: productId,
+        quantity: 1,
+      }
+      ]
+    }
 
     this.cartItems.forEach((cartItem) => {
       if(productId === cartItem.productId){
@@ -43,10 +47,19 @@ export default class Cart {
     this.saveToStorage();
   }
 
-  removeFromCart(Product) {
-  }
+  removeFromCart(productId) {
+    let updatedCart = [];
 
-  #updateQuantity(){
-    
+    this.cartItems.forEach((item) => {
+      if(item.productId !== productId){
+        updatedCart.push(item);
+      }else if(item.productId === productId && item.quantity > 1) {
+        item.quantity--;
+        updatedCart.push(item);
+      }
+    })
+
+    this.cartItems = updatedCart;
+    this.saveToStorage();
   }
 }

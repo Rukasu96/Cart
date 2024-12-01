@@ -57,7 +57,7 @@ function updateCartQuantity(){
 
   let cartQuantityHTML = 
     `
-    <button class="CartButton">Cart Icon (${cart.cartQuantity})</button>
+    <button class="CartButton">Cart Icon (${cartQuantity})</button>
     `;
 
   document.querySelector('.jsCartQuantityButton').innerHTML = cartQuantityHTML;

@@ -15,6 +15,7 @@ body {
 .ProductContainer {
   display: flex;
   justify-content: center;
+  justify-content: space-evenly;
   border: 2px solid;
   width: 600px;
   height:150px;
@@ -23,6 +24,7 @@ body {
 
 .ProductCardImageContainer {
   display: flex;
+  width:30%;
 }
 
 .ProductImage {
@@ -35,13 +37,24 @@ body {
   flex-direction:column;
   justify-content:center;
   justify-content:space-evenly;
-  margin: 5px;
 }
 
 .ProductCardButtonRemoveContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 40px; 
-  flex-grow: 0.6;
+}
+
+.CheckoutCardButton {
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  border: 2px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.CheckoutCardButton:hover {
+  background-color: #F03535;
 }
