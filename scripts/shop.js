@@ -1,9 +1,10 @@
-import Cart from '../Data/cart.js';
+import cart from '../Data/cart.js';
 import { products } from '../Data/products.js';
 
-const cart = new Cart('cart');
 
-renderProducts();
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+});
 
 function renderProducts() {
   let productsHTML = '';
@@ -62,5 +63,3 @@ function updateCartQuantity(){
 
   document.querySelector('.jsCartQuantityButton').innerHTML = cartQuantityHTML;
 }
-
-export default cart;

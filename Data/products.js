@@ -1,4 +1,4 @@
-import Product from '../Data/product.js';
+import Product from './product-Class.js';
 
 export let products = [];
 

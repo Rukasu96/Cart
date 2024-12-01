@@ -1,10 +1,11 @@
-import cart from './shop.js'
+import cart from '../Data/cart.js';
 import { products } from '../Data/products.js';
-import Product from '../Data/product.js';
 
 let cartProducts;
 
-renderCartProducts();
+document.addEventListener("DOMContentLoaded", () => {
+  renderCartProducts();
+});
 
 function renderCartProducts(){
   checkCartProducts();
