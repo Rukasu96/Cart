@@ -1,7 +1,8 @@
 import cart from '../Data/cart.js';
 import { products } from '../Data/products.js';
+import { cartCost, SummarizeCartCost, FormatCurrency } from './money.js';
 
-let cartProducts;
+export let cartProducts;
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCartProducts();
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderCartProducts(){
   checkCartProducts();
+  SummarizeCartCost();
   let cartProductsHTML = '';
 
 
@@ -35,15 +37,22 @@ function renderCartProducts(){
             Rating: ${cartProduct.product.rating}
           </span>
           <span>
-            Price: ${cartProduct.product.price}
+            Price: ${FormatCurrency(cartProduct.product.price)}zł
           </span>
         </div>
         <span class="ProductCardButtonRemoveContainer">
-          <button class="CheckoutCardButton jsRemoveItemButton" data-product-id = "${cartProduct.product.id}">Remove</button>
+          <button class="CheckoutCardButton jsRemoveItemButton" data-product-id = "${cartProduct.product.id}">Remove (${cartProduct.quantity})</button>
         </span>
       </div>
       `
       });
+
+      cartProductsHTML += 
+      `
+      <span class="CartPrice">
+        Price: ${FormatCurrency(cartCost)}zł
+      </span>
+      `
     
       document.querySelector('.jsCartProductContainer').innerHTML = cartProductsHTML;
     

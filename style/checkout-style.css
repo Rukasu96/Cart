@@ -53,3 +53,8 @@
 .CheckoutCardButton:hover {
   background-color: #F03535;
 }
+
+.CartPrice {
+  margin: 3px;
+  padding-left: 500px;
+}
