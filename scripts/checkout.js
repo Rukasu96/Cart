@@ -24,7 +24,7 @@ function renderCartProducts(){
       `
       <div class="ProductContainer">
         <div class="ProductCardImageContainer">
-          <img src="/images/boots.jpg" class="ProductImage">
+          <img src="/images/${cartProduct.product.thumbnail}.jpg" class="ProductImage">
         </div>
         <div class="ProductCardPropertiesContainer">
           <span>
